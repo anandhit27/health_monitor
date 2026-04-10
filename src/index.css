@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Healthcare-themed design system */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary: Medical Blue */
+    --primary: 210 100% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 42%;
+
+    /* Secondary: Healthcare Green */
+    --secondary: 152 69% 31%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted backgrounds */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Soft Blue */
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 100% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 47%;
+
+    /* Status colors for risk levels */
+    --success: 152 69% 31%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+
+    /* Healthcare gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 47%), hsl(210 100% 42%));
+    --gradient-secondary: linear-gradient(135deg, hsl(152 69% 31%), hsl(152 69% 26%));
+    --gradient-background: linear-gradient(180deg, hsl(210 40% 98%), hsl(0 0% 100%));
+
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 hsl(210 100% 47% / 0.1), 0 1px 2px 0 hsl(210 100% 47% / 0.06);
+    --shadow-elevated: 0 4px 6px -1px hsl(210 100% 47% / 0.1), 0 2px 4px -1px hsl(210 100% 47% / 0.06);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode healthcare theme */
+    --background: 215 28% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 215 28% 17%;
+    --primary-hover: 210 100% 51%;
+
+    --secondary: 152 69% 39%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 215 28% 23%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 28% 23%;
+    --accent-foreground: 210 100% 56%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 23%;
+    --input: 215 28% 23%;
+    --ring: 210 100% 56%;
+
+    --success: 152 69% 39%;
+    --success-foreground: 215 28% 17%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 215 28% 17%;
+    --danger: 0 84% 60%;
+    --danger-foreground: 210 40% 98%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%), hsl(210 100% 51%));
+    --gradient-secondary: linear-gradient(135deg, hsl(152 69% 39%), hsl(152 69% 34%));
+    --gradient-background: linear-gradient(180deg, hsl(215 28% 17%), hsl(215 28% 19%));
+
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.2), 0 1px 2px 0 hsl(0 0% 0% / 0.12);
+    --shadow-elevated: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.12);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
